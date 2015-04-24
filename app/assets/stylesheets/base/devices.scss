@@ -1,0 +1,23 @@
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* Device based breakpoints                                                 */
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */ 
+
+// Size breakpoints by device
+$phone:                   480px !default;
+$tablet-small:            763px !default;
+$tablet:                  992px !default;
+$desktop:                 1200px !default;
+
+// Hide per device helpers
+.hide-on-phone {
+	@extend .hidden-xs
+}
+.hide-on-tablet-small {
+	@extend .hidden-sm
+}
+.hide-on-tablet {
+	@extend .hidden-md
+}
+.hide-on-desktop {
+	@extend .hidden-lg
+}

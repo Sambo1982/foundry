@@ -1,0 +1,294 @@
+/* Form variables                                                            */
+//--------------------------------------------------------------------------//
+
+
+// Global variables
+// --------------------------------------------------
+
+	// Form title 
+	$form-title-color:							$charcoal;	
+	$form-title-align:							center;
+	$form-title-bottom-margin:			20px;
+
+	// Form element 
+	$form-padding-bottom:						40px;
+	
+	// Form group 
+	$form-group-margin:							0 0 10px;
+	$form-group-position:						relative;
+
+	// Label 
+	$label-font-size: 							14px;
+	$label-font-weight:   					300;
+	$label-color:										$charcoal;
+	$label-text-transform:    			uppercase;
+
+	// Input
+	$input-radius:									4px;
+
+	// Form paragraph text
+	$form-p-font-size: 							12px;
+	$form-p-font-weight:   					300;
+	$form-p-color:   								$charcoal;
+
+
+// Large form variables
+// --------------------------------------------------
+
+	// Parent div dimension
+	$lg-form-padding-top:							30px;	
+	$lg-form-max-width:								320px;
+	$lg-form-margin:									0 auto;	
+
+	// Inputs
+	$lg-form-input-width: 						100%;
+	$lg-form-input-bg:								rgba(234,125,36,0.3);
+	$lg-form-input-border:						none;
+	$lg-form-input-size:							16px;
+	$lg-form-input-weight:						300;
+	$lg-form-input-padding:						15px 40px;
+	$lg-form-input-position: 					relative;
+	$lg-form-input-text-align: 				center;
+	$lg-form-placeholder-color:				$light-grey;
+	$lg-form-placeholder-size:				13px;
+	$lg-form-active-bg:								rgba(255,255,255,0.6);
+	$lg-form-active-placeholder:			$lg-form-active-bg;
+	$lg-form-active-border:						1px solid $orange;
+
+	// Font awsome input icons
+	$input-icon-width: 								18px;
+	$input-icon-height: 							$input-icon-width;
+	$input-icon-text-align: 					center;
+	$input-icon-z-index: 							100;
+	$input-icon-color: 								$light-grey;
+	$input-icon-font-size: 						20px;
+	$input-icon-position: 						absolute;
+	$input-icon-top: 									$input-icon-height;
+	$input-icon-left: 								15px;
+
+	// Checkbox
+	$lg-checkbox-text-align:					center;
+	$lg-checkbox-color:								$charcoal;
+	$lg-checkbox-font-size:						12px;
+
+	// Form paragraph text
+	$lg-form-p-font-size:							12px;
+	$lg-form-p-align:									center;
+	$lg-form-p-padding-top:						10px;
+	$lg-form-p-font-weight:						300;
+	$lg-form-p-color:									$charcoal;
+
+	// Form links
+	$lg-form-link-weight:							500;
+	$lg-form-link-color:							$charcoal;
+
+
+// Light form variables
+// --------------------------------------------------
+	
+	// Form title 
+	$light-form-title-color: 					$offwhite !important;	
+
+	// Form paragraph
+	$light-form-p-color:							$offwhite;
+
+	// Form links
+	$light-form-link-color:						$offwhite;
+	
+	// Inputs
+	$light-form-input-bg:							rgba(255,255,255,0.3) !important;
+	$light-form-active-bg:						rgba(255,255,255,1) !important;
+	$light-form-active-placeholder:		$light-form-active-bg !important;
+	$light-form-label-color:					$offwhite;
+
+//****************************************************************************//
+
+
+/* Form styles                                                               */
+//--------------------------------------------------------------------------//
+
+// Global styles
+form {
+	label {
+		font-size: $label-font-size;
+  	font-weight: $label-font-weight;
+  	color: $label-color;
+  	text-transform: $label-text-transform;
+	}
+	input {
+		@include border-radius ($input-radius)
+	}
+}
+
+
+// Large forms for user sign-up, sign-in, etc
+.large-form {
+	padding-top: $lg-form-padding-top;
+  max-width: $lg-form-max-width;
+  margin: $lg-form-margin;
+  h3 {
+  	text-align: $form-title-align;
+  	margin-bottom: $form-title-bottom-margin;
+  	color: $form-title-color;
+  }
+  p {
+  	text-align: $lg-form-p-align;
+  	font-size: $form-p-font-size;
+  	font-weight: $form-p-font-weight;
+  	color: $form-p-color;
+  }
+  form{
+  	padding-bottom: $form-padding-bottom;
+		.form-group {
+		  margin: $form-group-margin;
+		  position: $form-group-position;
+			input {
+			  background-color: $lg-form-input-bg;
+			  border: $lg-form-input-border;
+			  font-size: $lg-form-input-size;
+			  font-weight: $lg-form-input-weight;
+			  padding: $lg-form-input-padding;
+			  position: $lg-form-input-position;
+			  text-align: $lg-form-input-text-align;
+			  width: $lg-form-input-width;
+			  @include placeholder { 
+			  	color: $lg-form-placeholder-color; 
+			  	font-size: $lg-form-placeholder-size; 
+			  }
+				&:focus {
+					background-color: $lg-form-active-bg;
+					outline: none !important;
+    			border: $lg-form-active-border;
+					@include placeholder { 
+						color: $lg-form-active-placeholder; 
+					}
+				}
+			}
+			span.fa { 
+				width: $input-icon-width;
+				height: $input-icon-height;
+				text-align: $input-icon-text-align;
+				z-index: $input-icon-z-index;
+				color: $input-icon-color;
+				font-size: $input-icon-font-size;
+		  	position: $input-icon-position;
+		  	top: $input-icon-top;
+		  	left: $input-icon-left;
+			}
+		}
+		.checkbox{
+			text-align: $lg-checkbox-text-align;
+			label {
+				font-size: $lg-checkbox-font-size;
+			}
+		}
+	}
+}
+
+// Light forms used for dark-backgrounds
+.light-form {
+	h3 {
+		color: $light-form-title-color;
+	}
+	p {
+		color: $light-form-p-color;
+		a {
+			color: $light-form-link-color;
+		}
+	}
+	form {
+		.form-group {
+			input {
+				background-color: $light-form-input-bg;
+				@include placeholder { 
+			  }
+				&:focus {
+					background-color: $light-form-active-bg;
+					@include placeholder { 
+						color: $light-form-active-placeholder; 
+					}
+				}
+			}
+		}
+		.checkbox{
+			label {
+				color: $light-form-label-color;
+			}
+		}
+	}
+}
+
+// Checkbox switch toggles
+$switch-width: 60px;
+.switches {
+	border: 1px solid $dark-white;
+	.switch-group {
+		margin: 10px 10px 10px 10px;
+		height: $switch-width / 2;
+		vertical-align: middle;
+		.question {
+			@extend p.light;
+			float: left;
+			position: relative;
+  		top: 50%;
+  		transform: translateY(-50%);
+		}
+		.answer {
+			width: $switch-width;
+			float: right;
+		}
+	}
+}
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.switch-round-flat + label {
+  padding: 2px;
+  width: $switch-width;
+  height: $switch-width / 2;
+  background-color: #dddddd;
+  border-radius: $switch-width / 2;
+  transition: background 0.4s;
+}
+input.switch-round-flat + label:before,
+input.switch-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+input.switch-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: $switch-width / 2;
+  transition: background 0.4s;
+}
+input.switch-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: $switch-width * .35;
+  background-color: #dddddd;
+  border-radius: $switch-width * .35;
+  transition: margin 0.4s, background 0.4s;
+}
+input.switch-round-flat:checked + label {
+  background-color: #8ce196;
+}
+input.switch-round-flat:checked + label:after {
+  margin-left: $switch-width / 2;
+  background-color: #8ce196;
+}
+

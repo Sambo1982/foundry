@@ -1,0 +1,32 @@
+<div class="large-form light-form">
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
+    <h3>Sign in</h3>
+    <%= devise_error_messages! %>
+    <div class="form-group">
+      <span class="fa fa-envelope"></span>
+      <%= f.email_field :email, :autofocus => true, class: '', placeholder: 'Email'  %>
+    </div>
+    <div class="form-group">
+      <span class="fa fa-lock"></span>
+      <%= f.password_field :password, class: '', placeholder: 'Password' %>
+    </div>
+      <%= f.submit 'Sign in', :class => "button-primary button-large rounded-button button-stretch" %>
+      <% if devise_mapping.rememberable? -%>
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :remember_me %> Remember me
+          </label>
+        </div>
+        <div class="password-dialog">
+          <p>
+            <%- if devise_mapping.recoverable? %>
+              <%= link_to "Forgot password? ", new_password_path(resource_name) %>
+            <% end -%>
+            <%- if devise_mapping.registerable? %>
+              Looking to <%= link_to 'sign up?', new_registration_path(resource_name) %>
+            <% end -%>
+          </p>
+        </div>
+      <% end -%>
+  <% end %>
+</div>

@@ -1,0 +1,85 @@
+// Primary body settings
+html, body {
+  height: 100%;
+}
+body {
+  background-color: $blue;
+  margin-bottom: 50px;
+}
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+.app-panel{
+  position: relative;
+  background: #fff;
+  margin: 40px auto;
+  width: 50%;
+  text-align: center;
+  @include border-radius(4px);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  // Tablet styles //
+  @media (max-width: $tablet) {
+    width: 75%;
+  }
+  // Small tablet styles //
+  @media (max-width: $tablet-small) {
+    width: 85%;
+  }
+  // Phone styles //
+  @media (max-width: $phone) {
+    width: 95%;
+  }
+}
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  width: 100%;
+  margin-top: $navbar-height + 30px;
+  background-color: $blue;
+}
+// Extends bootstrap's container class to add proper padding to content
+.content {
+  @extend .container
+}
+//Extend row style
+section {
+  @extend .row;
+  margin-top: 20px;
+}
+//Errors and such
+#error_explanation {
+  @extend .alert;
+  @extend .alert-danger;
+}
+#error_explanation h2 {
+  font-size: 16px;
+}
+.button-xs {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-xs;
+}
+

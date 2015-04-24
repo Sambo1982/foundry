@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+<header>
+  <nav class="top-nav">
+    <div class="content">
+      <!--Toggle button for Mobile -->
+      <div class="nav-header">
+        <div class="logo">
+         <%= link_to 'Foundry.io', user_path(current_user), class: 'navbar-brand' %>
+        </div>
+        <button type="button" class="mobile-toggle collapsed" data-toggle="collapse" data-target="#nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="nav-link-group" id="nav-links">
+        <ul class="nav-links" >
+          <%= render 'layouts/navigation_links' %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<% end %>

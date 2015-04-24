@@ -1,0 +1,36 @@
+// Global Color Variables
+// --------------------------------------------------
+
+	// Brand Colors
+	$blue: 						#061B2B;
+	$green: 					#796E24;
+	$tan: 						#F9DF8D;
+	$yellow: 					#EE9C21;
+	$orange: 					#EA7D24;
+	$red: 						#A34E24;
+
+	// Secondary Colors
+	$white: 					#FFF;
+	$offwhite: 				#f3f3f3;
+	$dark-white:			#d5d7d8;
+	$charcoal: 				#252525;
+	$grey: 						#9090AA;
+	$bright-green:		#17a65e;
+
+	// Extended Colors
+	$dark_grey: 			#52616d;
+	$med_grey: 				#363738;
+	$light_grey: 			#929292;
+	$very_light_grey: #F2F4F5;
+
+
+// Scaffolding
+// --------------------------------------------------
+
+	$bodyBackground: 	$offwhite;
+
+// Links
+// --------------------------------------------------
+
+	$linkColor:             #47C2FF;
+	$linkColorHover:        darken($linkColor, 15%);

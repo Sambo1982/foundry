@@ -1,0 +1,8 @@
+h1. Shopkeep Labrador
+
+To run locally perform the following:
+* Update `.env` file with client credential and API configuration
+* `rake db:setup`
+* `source .env`
+
+More readme details to be added shortly.

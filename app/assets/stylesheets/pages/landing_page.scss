@@ -1,0 +1,37 @@
+//Doggy video style :)
+video { 
+  @include entire-screen;
+  z-index: -100;
+  transition: 1s opacity;
+}
+//Overlay to doggy video
+#home-overlay {
+  @include entire-screen;
+  z-index: -50;
+  background-color: $blue;
+  opacity: 0.1;
+  filter: alpha(opacity=0.1);
+}
+//Main content wrapper to center align content
+
+//Hero content styles
+#home-hero {
+  @include centered-content;
+  text-align: center;
+  h1 {
+    color: $white;
+    font-size: 100px;
+    small {
+      color: $orange;
+      font-size: 50px;
+    }
+  }
+  p {
+    color: $white;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 2;
+    margin: 0px;
+  }
+}
+

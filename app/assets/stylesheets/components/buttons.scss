@@ -1,0 +1,86 @@
+/* Buttons                                                                   */
+//--------------------------------------------------------------------------//
+
+// Button Colors
+// --------------------------------------------------
+
+	// Base Button
+		$btnText:									$dark-grey;
+		$btnBackground:           $offwhite;
+		$btnHover:      					darken($btnBackground, 5%);
+		$btnBorder:               $dark-white;
+	
+	// Primary Button
+		$btnPrimaryText:					$white;
+		$btnPrimaryBackground:    $bright-green;
+		$btnPrimaryHover:      		darken($btnPrimaryBackground, 10%);
+		$btnPrimaryBorder:        $btnPrimaryBackground;
+
+	// Danger Button
+		$btnDangerBackground:    	$red;
+		$btnDangerHover:      		darken($btnDangerBackground, 10%);
+		$btnDangerBorder:         darken($btnDangerBackground, 10%);
+
+// Button Styles
+// --------------------------------------------------
+
+// Base button styles
+.button {
+	@extend .btn;
+	color: $btnText;
+	background-color: $btnBackground;
+	border: 1px solid $btnBorder;
+	@include border-radius(0px);
+	&:hover{
+		color: $btnText;
+		background-color: $btnHover;
+	}
+}
+
+// Primary button styles
+.buttons{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.button-primary {
+	@extend .button;
+	color: $btnPrimaryText;
+	background-color: $btnPrimaryBackground;
+	border-color: $btnPrimaryBorder;
+	&:hover{
+		color: $btnPrimaryText;
+		background-color: $btnPrimaryHover;
+	}
+}
+
+.button-danger {
+	@extend .button-primary;
+	background-color: $btnDangerBackground;
+	border-color: $btnDangerBorder;
+	&:hover{
+		background-color: $btnDangerHover;
+	}
+}
+
+// Button helpers
+	
+	//Make a button large
+	.button-large {
+		@extend .btn-lg;
+		font-size: 16px;
+		font-weight: 300;
+		padding: 15px 40px;
+		i {
+			margin-right: 5px;
+		}
+	}
+
+	//Make a button rounded
+	.rounded-button {
+		@include border-radius(4px);
+	}
+
+	//Make a button full width
+	.button-stretch {
+		width: 100%;
+	}

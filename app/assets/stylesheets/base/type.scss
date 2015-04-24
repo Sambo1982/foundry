@@ -1,0 +1,303 @@
+/* Global Foundry.io type variables                                           */
+//--------------------------------------------------------------------------//
+
+  // Imported fonts //
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+  @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700);
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+  @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+  // Font families //
+  $open-sans-font-family: Open Sans, sans-serif;
+  $source-code-font-family: Source Code Pro, Menlo, monospace;
+  $condensed-sans-font-family: Open Sans Condensed, sans-serif;
+  $robo-font-family: Roboto Slab, Open Sans Condensed;
+
+  // Font weights //
+  $font-weight-light: lighter !default;
+  $font-weight-normal: normal !default;
+  $font-weight-bold: bold !default;
+
+  // Link variables  //
+  $link-color: $blue;
+  $link-visited-color: $dark_grey;
+
+/* Body type                                                                */
+//--------------------------------------------------------------------------//
+$body-font-family: $open-sans-font-family;
+$body-font-color: $charcoal;
+$body-font-style: normal;
+$body-font-size: 16px;
+$body-font-weight: $font-weight-normal;
+
+  // Desktop body type //
+  $body-line-height: 1.375em;
+
+  // Tablet body type //
+  $tablet-body-line-height: 1.375em;
+
+  // Small Tablet body type //
+  $small-tablet-body-line-height: 1.25em;
+
+  // Phone body type //
+  $phone-body-line-height: 1.25em;
+
+/* Header type                                                               */
+//--------------------------------------------------------------------------//
+$header-font-family: $condensed-sans-font-family;
+$header-font-weight: 300;
+$header-font-style: $body-font-style;
+$header-font-color: $body-font-color;
+$header-line-height: 1.4em;
+
+  // Desktop header type //
+  $h1-font-size: 44px;
+  $h2-font-size: 36px;
+  $h3-font-size: 27px;
+  $h4-font-size: 23px;
+  $h5-font-size: 18px;
+
+  // Tablet header type //
+  $tablet-header-line-height: 1.25em;
+  $tablet-h1-font-size: 40px;
+  $tablet-h2-font-size: 32px;
+  $tablet-h3-font-size: 24px;
+  $tablet-h4-font-size: 18px;
+  $tablet-h5-font-size: 16px;
+
+  // Small Tablet header type //
+  $small-tablet-header-line-height: 1.15em;
+  $small-tablet-h1-font-size: 32px;
+  $small-tablet-h2-font-size: 26px;
+  $small-tablet-h3-font-size: 22px;
+  $small-tablet-h4-font-size: 18px;
+  $small-tablet-h5-font-size: 16px;
+
+  // Phone header type //
+  $phone-header-line-height: 1.11em;
+  $phone-h1-font-size: 32px;
+  $phone-h2-font-size: 26px;
+  $phone-h3-font-size: 22px;
+  $phone-h4-font-size: 18px;
+  $phone-h5-font-size: 16px;
+
+/* Code type                                                                 */
+//--------------------------------------------------------------------------//
+
+// Default code block //
+$code-block-background: $offwhite;
+$code-font-family: $source-code-font-family;
+$code-font-color: $light-grey;
+
+// Alternate code block //
+$alt-code-block-background: $dark-grey;
+$alt-code-font-color: $offwhite;
+
+/* Title type                                                                */
+//--------------------------------------------------------------------------//
+$title-font-family: $robo-font-family;
+
+/* Styles                                                                    */
+//--------------------------------------------------------------------------//
+
+// Global type css //
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  font-family: $body-font-family;
+  color: $body-font-color;
+  font-style: $body-font-style;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  // Tablet styles //
+  @media (max-width: $tablet) {
+    line-height: $tablet-body-line-height;
+  }
+  // Small tablet styles //
+  @media (max-width: $tablet-small) {
+    line-height: $small-tablet-body-line-height;
+  }
+  // Phone styles //
+  @media (max-width: $phone) {
+    line-height: $phone-body-line-height;
+  }
+}
+
+// Link type css //
+a {
+  color: $link-color;
+}
+a:hover {
+  color: $link-visited-color;
+}
+
+// Header type css //
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $header-font-family;
+    color: $header-font-color;
+    font-style: $header-font-style;
+    font-weight: $header-font-weight;
+    line-height: $header-line-height;
+  }
+  h1 {
+    font-size: $h1-font-size;
+    // Tablet styles //
+    @media (max-width: $tablet) {
+      line-height: $tablet-header-line-height;
+      font-size: $tablet-h1-font-size;
+    }
+    // Small tablet styles //
+    @media (max-width: $tablet-small) {
+      line-height: $small-tablet-header-line-height;
+      font-size: $small-tablet-h1-font-size;
+    }
+    // Phone styles //
+    @media (max-width: $phone) {
+      line-height: $phone-header-line-height;
+      font-size: $phone-h1-font-size;
+    }
+  }
+  h2 {
+    font-size: $h2-font-size;
+    // Tablet styles //
+    @media (max-width: $tablet) {
+      line-height: $tablet-header-line-height;
+      font-size: $tablet-h2-font-size;
+    }
+    // Small tablet styles //
+    @media (max-width: $tablet-small) {
+      line-height: $small-tablet-header-line-height;
+      font-size: $small-tablet-h2-font-size;
+    }
+    // Phone styles //
+    @media (max-width: $phone) {
+      line-height: $phone-header-line-height;
+      font-size: $phone-h2-font-size;
+    }
+  }
+  h3 {
+    font-size: $h3-font-size;
+    // Tablet styles //
+    @media (max-width: $tablet) {
+      line-height: $tablet-header-line-height;
+      font-size: $tablet-h3-font-size;
+    }
+    // Small tablet styles //
+    @media (max-width: $tablet-small) {
+      line-height: $small-tablet-header-line-height;
+      font-size: $small-tablet-h3-font-size;
+    }
+    // Phone styles //
+    @media (max-width: $phone) {
+      line-height: $phone-header-line-height;
+      font-size: $phone-h2-font-size;
+    }
+  }
+  h4 {
+    font-size: $h4-font-size;
+    // Tablet styles //
+    @media (max-width: $tablet) {
+      line-height: $tablet-header-line-height;
+      font-size: $tablet-h4-font-size;
+    }
+    // Small tablet styles //
+    @media (max-width: $tablet-small) {
+      line-height: $small-tablet-header-line-height;
+      font-size: $small-tablet-h4-font-size;
+    }
+    // Phone styles //
+    @media (max-width: $phone) {
+      line-height: $phone-header-line-height;
+      font-size: $phone-h2-font-size;
+    }
+  }
+  h5 {
+    font-size: $h5-font-size;
+    // Tablet styles //
+    @media (max-width: $tablet) {
+      line-height: $tablet-header-line-height;
+      font-size: $tablet-h5-font-size;
+    }
+    // Small tablet styles //
+    @media (max-width: $tablet-small) {
+      line-height: $small-tablet-header-line-height;
+      font-size: $small-tablet-h5-font-size;
+    }
+    // Phone styles //
+    @media (max-width: $phone) {
+      line-height: $phone-header-line-height;
+      font-size: $phone-h5-font-size;
+    }
+  }
+}
+
+//Code block styles
+pre {
+  background-color: $code-block-background;
+  font-family: $code-font-family;
+  color: $code-font-color;
+  font-size: 12px;
+  code {
+    font-family: $code-font-family;
+    color: $code-font-color;
+  }
+}
+pre.alternate {
+  background-color: $alt-code-block-background;
+  code {
+    font-family: $code-font-family;
+    color: $alt-code-font-color;
+  }
+}
+
+// Horizontal line strikethrough
+.divider hr, .divider span {
+  display: inline-block;
+  margin: 0;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  width: 76px;
+}
+.divider {
+  margin: 16px auto 15px;
+  text-align: center;
+}
+.divider span {
+  color: $white;
+  font-size: 13px;
+  opacity: .6;
+  -ms-filter: "alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  position: relative;
+  top: 2px;
+  width: 26px;
+  p {
+    color: $white;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 2;
+    margin: 0px;
+  }
+}
+
+//Paragraph styles
+p.light {
+  font-size: 14px;
+  font-weight: 300;
+}

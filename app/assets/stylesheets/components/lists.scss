@@ -1,0 +1,19 @@
+// List styles
+// --------------------------------------------------
+
+// list group
+.list {
+	@extend .list-group;
+	text-align: left;
+	li {
+		@extend .list-group-item;
+		p {
+			font-size: 14px;
+			font-weight: 100;
+			span {
+				color: $orange;
+			}
+		}
+	}
+}
+

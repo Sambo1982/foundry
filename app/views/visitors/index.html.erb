@@ -1,0 +1,12 @@
+
+	<div id="home-hero">
+		<h1><small>Welcome to</small><br>foundry.io</h1>
+		<p>Because we eat our own dog food.</p> <br/>
+		<% if user_signed_in? %>
+		<% else %>
+	  	<%= link_to 'Sign up', new_user_registration_path, class: "button-primary button-large rounded-button button-stretch" %>
+	  	<div class="divider"><hr><span>or</span><hr></div>
+	  	<%= link_to 'Sign in', new_user_session_path, class: "button button-large rounded-button button-stretch" %>
+		<% end %>
+	</div>
+

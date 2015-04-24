@@ -1,0 +1,19 @@
+// import gem framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+// import base variables
+@import "base/*";
+
+// Import mixins
+@import "mixins/*";
+
+// site base frameworks
+@import "framework_and_overrides";
+
+// site components
+@import "components/*";
+
+// import page styles
+@import "pages/*";

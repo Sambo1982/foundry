@@ -1,0 +1,16 @@
+<div class="large-form light-form">
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :role => 'form'}) do |f| %>
+    <h3>Forgot your password?</h3>
+    <p>We'll email you intructions to reset your password.</p>
+    <%= devise_error_messages! %>
+    <div class="form-group">
+      <span class="fa fa-envelope"></span>
+      <%= f.email_field :email, :autofocus => true, :placeholder => 'Email' %>
+    </div>
+      <%= f.submit 'Reset Password', :class => "button-primary button-large rounded-button button-stretch" %>
+      <div class="divider"><hr><span>or</span><hr></div>
+      <div class="password-dialog">
+        Return to the <%= link_to 'login page.', new_user_session_path %>
+      </div>
+  <% end %>
+</div>
